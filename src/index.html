@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=1250" name="viewport">
+	<title>Test assignment, Первый Бит</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Table Heading</h1>
+		<div class="wrapper">
+			<header class="header">
+				<button class="header__filter">Filter</button>
+				<div class="header__search-wrapper">
+					<input id="main-search" type="text" class="header__search" placeholder="Search Users by Name or E-mail">
+					<button class="header__search-close"></button>
+				</div>
+				<div class="header-btns">
+					<button class="header-btns__columns-btn">Order columns</button>
+					<button class="header-btns__add-btn">+</button>
+				</div>
+			</header>
+			<section class="selection">
+				<div class="selection__wrapper">
+					<div class="payment-status-selector selection__payment-status-selector">
+						<div class="selection__payment-filters">
+							<span>Select Payment status</span>
+						</div>
+						<div class="popup-payment-selector">
+							<div class="popup-payment-selector__wrapper">
+								<label class="checkbox-main popup-payment-selector__option"><input type="checkbox" name="payment-selector-input" value="All"><span>All</span></label>
+								<label class="checkbox-main popup-payment-selector__option"><input type="checkbox" name="payment-selector-input" value="Paid"><span>Paid</span></label>
+								<label class="checkbox-main popup-payment-selector__option"><input type="checkbox" name="payment-selector-input" value="Unpaid"><span>Unpaid</span></label>
+								<label class="checkbox-main popup-payment-selector__option"><input type="checkbox" name="payment-selector-input" value="Overdue"><span>Overdue</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="user-status-selector selection__user-status-selector">
+						<span>Select User status:</span>
+						<input type="checkbox" class="user-status-selector__input" id="selection-status-active" name="user-status-input" value="Active">
+						<label for="selection-status-active">Active</label>
+						<input type="checkbox" class="user-status-selector__input" id="selection-status-inactive" name="user-status-input" value="Inactive">
+						<label for="selection-status-inactive">Inactive</label>
+					</div>
+				</div>
+			</section>
+			<section class="column-settings">
+				<div class="column-settings__wrapper">
+					<div class="column-settings__control-btns">
+						<button class="column-settings__control-btn column-settings__control-btn_start"></button>
+						<button class="column-settings__control-btn column-settings__control-btn_left"></button>
+						<button class="column-settings__control-btn column-settings__control-btn_right"></button>
+						<button class="column-settings__control-btn column-settings__control-btn_end"></button>
+					</div>
+					<div class="column-settings__columns-wrapper">
+						<div class="column-settings__column-box column-box column-box_name">
+							<div class="column-box__wrapper">
+								<h3 class="column-box__header">Name</h3>
+								<button class="column-box__display-btn on"></button>
+							</div>
+						</div>
+						<div class="column-settings__column-box column-box column-box_status">
+							<div class="column-box__wrapper">
+								<h3 class="column-box__header">User status</h3>
+								<button class="column-box__display-btn on"></button>
+							</div>
+						</div>
+						<div class="column-settings__column-box column-box column-box_payment-status">
+							<div class="column-box__wrapper">
+								<h3 class="column-box__header">Payment status</h3>
+								<button class="column-box__display-btn on"></button>
+							</div>
+						</div>
+						<div class="column-settings__column-box column-box column-box_amount">
+							<div class="column-box__wrapper">
+								<h3 class="column-box__header">Amount</h3>
+								<button class="column-box__display-btn on"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<nav class="nav">
+				<div class="bar nav__bar">
+					<div class="bar__wrapper">
+						<div class="bar__section bar__section_check">
+							<label class="checkbox-main"><input type="checkbox" name="user-checkbox" id="main-user-checkbox"><span></span></label>
+						</div>
+						<div class="bar__section-wrapper">
+							<div class="bar__section bar__section-borderline bar__section_resizeble bar__section_name">
+								<div class="bar__container">
+									<h3 class="bar__header bar__header-name">Name</h3>
+								</div>
+								<button class="bar__width-slider bar__width-slider_name"></button>
+							</div>
+							<div class="bar__section bar__section-borderline bar__section_resizeble bar__section_user-status">
+								<div class="bar__container">
+									<h3 class="bar__header bar__header-status">User Status</h3>
+								</div>
+								<button class="bar__width-slider bar__width-slider_status"></button>
+							</div>
+							<div class="bar__section bar__section-borderline bar__section_resizeble bar__section_payment-status">
+								<div class="bar__container">
+									<h3 class="bar__header bar__header-payment_status">Payment Status</h3>
+								</div>
+								<button class="bar__width-slider bar__width-slider_payment-status"></button>
+							</div>
+							<div class="bar__section bar__section-borderline bar__section_resizeble bar__section_amount">
+								<div class="bar__container">
+									<h3 class="bar__header bar__header-amount">Amount</h3>
+								</div>
+								<button class="bar__width-slider bar__width-slider_amount hidden"></button>
+							</div>
+						</div>
+						<div class="bar__section bar__section_options">
+							<button class="bar__btn-options" title="Reset column settings">
+								<svg class="icon__dot" width="4" height="4" >
+									<circle  cx="2" cy="2" r="2"></circle>
+								</svg>
+								<svg class="icon__dot" width="4" height="4">
+									<circle cx="2" cy="2" r="2"></circle>
+								</svg>
+								<svg class="icon__dot" width="4" height="4">
+									<circle cx="2" cy="2" r="2"></circle>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div><!-- /.bar -->
+			</nav>
+			<main class="main"></main>
+			<footer class="footer">
+				<div class="popup-multi_data_change">
+					<button class="popup-multi_data_change__btn popup-multi_data_change__edit-btn">Edit</button>
+					<div class="popup-multi_data_change__borderline"></div>
+					<button class="popup-multi_data_change__btn popup-multi_data_change__delete-btn">Delete</button>
+				</div>
+				<div class="pagination">
+				</div>
+				<div class="footer__rows">
+					<div class="footer__rows-container">
+						Rows per page: <span class="footer__rows-limit">?</span>
+						<button class="footer__rows-btn"></button>
+					</div>
+					<div class="popup-rows-limit">
+						<div class="popup-rows-limit__container">
+							<button class="popup-rows-limit__btn">10</button>
+							<button class="popup-rows-limit__btn">15</button>
+							<button class="popup-rows-limit__btn">20</button>
+							<button class="popup-rows-limit__btn">30</button>
+						</div>
+					</div>
+				</div>
+				<p class="footer__users">
+					<span class="footer__users-shown">?-?</span>&nbsp;&nbsp;of&nbsp;&nbsp;<span class="footer__users-total">?</span>
+				</p>
+			</footer>
+		</div><!-- /.wrapper -->
+	</div><!-- /.container -->
+	<div class="popup">
+		<div class="popup-wrapper">
+			<div class="popup-new-user">
+				<form class="popup-new-user__form" id="new-user-form" name="new-user-form">
+					<h3 class="popup-new-user__header">New user</h3>
+					<label for="new-user-name" class="popup-new-user__label">Name</label>
+					<div class="popup-new-user__input-wrapper">
+						<input class="popup-new-user__input" type="text" id="new-user-name" placeholder="Enter name">
+					</div>
+					<label for="new-user-email" class="popup-new-user__label">E-mail</label>
+					<div class="popup-new-user__input-wrapper">
+						<input class="popup-new-user__input" type="text" id="new-user-email" placeholder="mail@mail.com">
+					</div>
+					<label for="new-user-amount" class="popup-new-user__label">Amount</label>
+					<div class="popup-new-user__input-wrapper">
+						<input class="popup-new-user__input" type="text" id="new-user-amount" placeholder="0$">
+					</div>
+					<button type="submit" class="popup-new-user__submit">Add</button>
+					<button type="button" class="popup-new-user__close"></button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
