@@ -276,6 +276,8 @@ h1 {
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit; 
     .borderline();
     &__filter {
         position: relative;
@@ -761,9 +763,7 @@ h1 {
             align-items: center;
             flex-shrink: 0;
         }
-        &_name {
-            min-width: 150px;
-            width: 30%;
+        &_name, &_payment-status {
             & .focus {
                 &.ascending  {
                     &.bar__header::after  {
@@ -778,6 +778,10 @@ h1 {
                     }
                 }
             }
+        }
+        &_name {
+            min-width: 150px;
+            width: 30%;
         }
         &_amount {
             & .focus {
@@ -795,7 +799,7 @@ h1 {
                 }
             }
         }
-        &_user-status, &_payment-status {
+        &_user-status {
             & .focus {
                 &.ascending  {
                     &.bar__header::after  {
@@ -1228,6 +1232,9 @@ h1 {
             right: 0;
             border: 5px solid transparent;
             border-top: 5px solid @lavenderText;
+        }
+        &-limit {
+            cursor: pointer;
         }
     }
     &__users {

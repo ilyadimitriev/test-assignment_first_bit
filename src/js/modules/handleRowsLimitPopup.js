@@ -9,7 +9,8 @@ const handleRowsLimitPopup = () => {
 
 	footerRows.addEventListener('click', event => {
 		const openBtn = event.target.closest('.footer__rows-btn');
-		if (openBtn) {
+		const rowsLimitNum = event.target.closest('.footer__rows-limit');
+		if (openBtn || rowsLimitNum) {
 			openRowsLimitPopup();
 			return;
 		}
@@ -39,7 +40,6 @@ const handleRowsLimitPopup = () => {
 	}
 
 	function handlePopupBtn(targetBtn) {
-		console.log('click');
 
 		const allPopupBtns = [...document.querySelectorAll('.popup-rows-limit__btn')];
 		const index = allPopupBtns.indexOf(targetBtn);
